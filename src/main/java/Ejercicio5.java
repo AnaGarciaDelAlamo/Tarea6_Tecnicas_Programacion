@@ -85,13 +85,4 @@ Cada una de las funciones mencionadas se debe realizar utilizando uno o más pro
             System.out.println();
         }
     }
-
-    public static void main(String[] args) {
-        Ejercicio5 ejercicio5 = new Ejercicio5();
-        ejercicio5.crearTablero();
-        ejercicio5.mostrarTablero();
-        ejercicio5.dibujarCaracter();
-        ejercicio5.dibujarRectangulo();
-        ejercicio5.cambiarColor();
-}
 }

@@ -1,7 +1,21 @@
 import java.util.Scanner;
 public class Ejercicio1 {
-    public static void main(String[] args) {
+    public void esMayor(){
         Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce un número: ");
+        int numero3 = sc.nextInt();
+        System.out.println("Introduce otro número: ");
+        int numero4 = sc.nextInt();
+        if(numero3 == numero4) {
+            System.out.println("0");
+        } else if (numero3 > numero4) {
+            System.out.println("1");
+        } else {
+            System.out.println("-1");
+        }
+    }
+
+
 
         //Escriba una función que tome dos valores reales como argumentos y devuelva el mayor de los dos.
        /* System.out.println("Introduce un número: ");
@@ -25,26 +39,4 @@ public class Ejercicio1 {
 el texto -1 en caso contrario.
 
 Escribir un algoritmo principal que llame a estas dos funciones.*/
-        System.out.println("Introduce un número: ");
-        int numero3 = sc.nextInt();
-        System.out.println("Introduce otro número: ");
-        int numero4 = sc.nextInt();
-        if(numero3 == numero4) {
-            System.out.println("0");
-        } else if (numero3 > numero4) {
-            System.out.println("1");
-        } else {
-            System.out.println("-1");
-        }
-
-
-
-
-
-
-
-
-
-
-    }
 }

@@ -23,6 +23,12 @@ public class Main {
                         break;
                     case 2:
                         System.out.println("Ejercicio 2");
+                        Ejercicio2 ejercicio2 = new Ejercicio2();
+                        char[][] tablero = new char[4][4];
+                        //ejercicio2.crearTabla(tablero);
+                        //ejercicio2.mostrarTabla(tablero);
+                        ejercicio2.introducirEnteroEntreLimites(1, 4);
+                        ejercicio2.disparar();
                         break;
                     case 3:
                         System.out.println("Ejercicio 3");

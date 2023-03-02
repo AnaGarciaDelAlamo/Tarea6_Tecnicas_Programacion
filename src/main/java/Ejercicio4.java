@@ -1,4 +1,6 @@
+import java.util.Scanner;
 public class Ejercicio4 {
+    Scanner sc = new Scanner(System.in);
 
     /*El objetivo de este juego es cruzar dos rebaños de ovejas.
 
@@ -22,20 +24,7 @@ Escribe el algoritmo principal, asumiendo que tiene a su disposición las funcio
 
 Escribir las funciones y procedimientos.*/
 
-    private char [] tablero = new char[7];
-
-    public void crearTablero() {
-        for (int i = 0; i < 7; i++) {
-            tablero[i] = '<';
-            System.out.print(tablero[i]);
-        }
-        System.out.println();
-    }
 
 
 
-    public static void main(String[] args) {
-
-
-    }
 }

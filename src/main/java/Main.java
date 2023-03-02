@@ -26,6 +26,9 @@ public class Main {
                         break;
                     case 3:
                         System.out.println("Ejercicio 3");
+                        Ejercicio3 ejercicio3 = new Ejercicio3();
+                        ejercicio3.crearTabla();
+                        ejercicio3.mayorValorTabla();
                         break;
                     case 4:
                         System.out.println("Ejercicio 4");

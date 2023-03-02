@@ -11,7 +11,9 @@ public class Ejercicio3 {
         int maximo = sc.nextInt();
         for (int i = 0; i < 10; i++) {
             tabla[i] = (int) (Math.random() * (maximo - minimo + 1) + minimo);
+            System.out.print(tabla[i]);
         }
+        System.out.println();
     }
 
     //Cree una función que devuelva el mayor valor de una tabla (esta tabla no tiene necesariamente diez celdas, etc.).
@@ -25,7 +27,9 @@ public class Ejercicio3 {
         int maximo = sc.nextInt();
         for (int i = 0; i < celdas; i++) {
             tabla[i] = (int) (Math.random() * (maximo - minimo + 1) + minimo);
+            System.out.print(tabla[i]);
         }
+        System.out.println();
         int mayor = tabla[0];
         for (int i = 0; i < 10; i++) {
             if (tabla[i] > mayor) {
@@ -33,12 +37,5 @@ public class Ejercicio3 {
             }
         }
         System.out.println("El mayor valor de la tabla es: " + mayor);
-    }
-
-    public static void main(String[] args) {
-        Ejercicio3 ejercicio3 = new Ejercicio3();
-        ejercicio3.crearTabla();
-        ejercicio3.mayorValorTabla();
-        System.out.println(ejercicio3);
     }
 }

@@ -38,8 +38,19 @@ public class Main {
                     case 3:
                         System.out.println("Ejercicio 3");
                         Ejercicio3 ejercicio3 = new Ejercicio3();
-                        ejercicio3.crearTabla();
-                        ejercicio3.mayorValorTabla();
+                        System.out.println("Introduce el límite mínimo: ");
+                        int min = sc.nextInt();
+                        System.out.println("Introduce el límite máximo: ");
+                        int max = sc.nextInt();
+
+                        int[] tabla = ejercicio3.crearTabla(min, max);
+
+                        int mayor = ejercicio3.mayorValor(tabla);
+
+                        System.out.println("--TABLA--");
+                        ejercicio3.imprimirTabla(tabla);
+                        System.out.println("El mayor valor es: " + mayor);
+
                         break;
                     case 4:
                         System.out.println("Ejercicio 4");
@@ -70,4 +81,6 @@ public class Main {
         System.out.println("4.- Ejercicio 4");
         System.out.println("5.- Ejercicio 5");
     }
+
+
 }

@@ -1,41 +1,35 @@
 import java.util.Scanner;
 public class Ejercicio3 {
-    Scanner sc = new Scanner(System.in);
 
-    //Escriba una función que cree una tabla que tenga una dimensión de diez números enteros e inicialice aleatoriamente los valores de esta tabla, con valores entre un límite mínimo y un límite máximo, que se pasan como argumentos.
-    public void crearTabla() {
-        int[] tabla = new int[10];
-        System.out.println("Introduce un número mínimo: ");
-        int minimo = sc.nextInt();
-        System.out.println("Introduce un número máximo: ");
-        int maximo = sc.nextInt();
-        for (int i = 0; i < 10; i++) {
-            tabla[i] = (int) (Math.random() * (maximo - minimo + 1) + minimo);
-            System.out.print(tabla[i]);
-        }
-        System.out.println();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
     }
 
-    //Cree una función que devuelva el mayor valor de una tabla (esta tabla no tiene necesariamente diez celdas, etc.).
-    public void mayorValorTabla() {
-        System.out.println("Introduce de cuantas celdas quieres la tabla: ");
-        int celdas = sc.nextInt();
-        int[] tabla = new int[celdas];
-        System.out.println("Introduce un número mínimo: ");
-        int minimo = sc.nextInt();
-        System.out.println("Introduce un número máximo: ");
-        int maximo = sc.nextInt();
-        for (int i = 0; i < celdas; i++) {
-            tabla[i] = (int) (Math.random() * (maximo - minimo + 1) + minimo);
-            System.out.print(tabla[i]);
+    public  int[] crearTabla(int min, int max){
+        int[] tabla = new int[10];
+
+        for(int i = 0; i <tabla.length; i++){
+            tabla[i] = (int) (Math.random() * (max - min + 1) + min);
         }
-        System.out.println();
-        int mayor = tabla[0];
-        for (int i = 0; i < 10; i++) {
-            if (tabla[i] > mayor) {
+        return tabla;
+    }
+
+    public  int mayorValor(int[] tabla){
+        int mayor= tabla[0];
+
+        for(int i = 1; i < tabla.length; i++){
+            if(tabla[i] > mayor){
                 mayor = tabla[i];
             }
         }
-        System.out.println("El mayor valor de la tabla es: " + mayor);
+        return mayor;
+    }
+
+    public  void imprimirTabla(int[] tabla){
+        for(int i = 0; i < tabla.length; i++){
+            System.out.print(tabla[i]);
+        }
+        System.out.println();
     }
 }

@@ -58,11 +58,8 @@ public class Main {
                     case 5:
                         System.out.println("Ejercicio 5");
                         Ejercicio5 ejercicio5 = new Ejercicio5();
-                        ejercicio5.crearTablero();
-                        ejercicio5.mostrarTablero();
                         ejercicio5.dibujarCaracter();
-                        ejercicio5.dibujarRectangulo();
-                        ejercicio5.cambiarColor();
+                        //ejercicio5.dibujarRectangulo();
                         break;
                 }
             }while(opcion >=0 || opcion < 6);

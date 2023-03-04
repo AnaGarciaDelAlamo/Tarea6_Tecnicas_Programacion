@@ -56,8 +56,39 @@ public void dibujarRectangulo(){
         dibujarRectangulo();
     }
 }
-//Cambiar "el color" (es decir, el carácter), usando un bote de pintura (puede inspirarse en lo que se presentó en la sección que trata sobre la recursividad).
 
+    public void pintarRecursivo(int fila, int columna, char caracterInicial, char caracterFinal){
+        if (fila < 0 || fila >= filas || columna < 0 || columna >= columnas){
+            return;
+        }
+        if(tabla[fila][columna] != caracterInicial){
+            return;
+        }
+        tabla[fila][columna] = caracterFinal;
+        pintarRecursivo(fila+1, columna, caracterInicial, caracterFinal);
+        pintarRecursivo(fila-1, columna, caracterInicial, caracterFinal);
+        pintarRecursivo(fila, columna+1, caracterInicial, caracterFinal);
+        pintarRecursivo(fila, columna-1, caracterInicial, caracterFinal);
+
+    }
+//Cambiar "el color" (es decir, el carácter), usando un bote de pintura (puede inspirarse en lo que se presentó en la sección que trata sobre la recursividad).
+public void cambiarElColor(){
+    System.out.println("Ingrese la fila y la columna del punto de partiada:\n");
+    int fila = sc.nextInt();
+    int columna = sc.nextInt();
+    if (fila >= 0 && fila < filas && columna >= 0 && columna < columnas){
+        char caracterInicial = tabla[fila][columna];
+        System.out.println("Ingrese el caracter que desea dibujar:\n");
+        char caracterFinal = sc.next().charAt(0);
+        pintarRecursivo(fila, columna, caracterInicial, caracterFinal);
+        mostrarTabla();
+    }else{
+        System.out.println("La fila o columna ingresada no es valida");
+        cambiarElColor();
+    }
+
+
+}
 //Cada una de las funciones mencionadas se debe realizar utilizando uno o más procedimientos.
 
 

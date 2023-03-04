@@ -24,11 +24,16 @@ public class Main {
                     case 2:
                         System.out.println("Ejercicio 2");
                         Ejercicio2 ejercicio2 = new Ejercicio2();
-                        char[][] tablero = new char[4][4];
-                        //ejercicio2.crearTabla(tablero);
-                        //ejercicio2.mostrarTabla(tablero);
-                        ejercicio2.introducirEnteroEntreLimites(1, 4);
-                        ejercicio2.disparar();
+                        ejercicio2.inicializarTablero();
+                        ejercicio2.mostrarTablero();
+                        ejercicio2.introducirLimites();
+                        boolean alcanzado = false;
+                        do{
+                            alcanzado = ejercicio2.disparar();
+                            ejercicio2.mostrarTablero();
+                        }while(!alcanzado);
+                        System.out.println("Has ganado");
+
                         break;
                     case 3:
                         System.out.println("Ejercicio 3");
